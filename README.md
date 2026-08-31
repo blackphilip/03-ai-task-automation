@@ -1,6 +1,6 @@
 # 🤖 AI 智慧會議摘要與 Task 自動化 API (AI Meeting Summary & Task Automation Agent)
 
-> **結合 FastAPI、Google Gemini API (`gemini-2.5-flash`) 與 Pydantic 結構化驗證，實現逐字稿自動化解析、核心決議提煉與待辦事項 (Action Items) 萃取之微服務。**
+> **結合 FastAPI、Google Gemini API (`gemini-3.1-flash`) 與 Pydantic 結構化驗證，實現逐字稿自動化解析、核心決議提煉與待辦事項 (Action Items) 萃取之微服務。**
 
 ---
 
@@ -10,7 +10,7 @@
 
 本專案建構了一套**微服務化 AI 工作流 API**：
 1. 使用者或前端可透過 RESTful API 端點傳入會議逐字稿、會議紀錄或長文內容。
-2. 系統呼叫 **Gemini 2.5 Flash** 進行語意理解與雜訊過濾，自動排除冗長發言與無關客套話。
+2. 系統呼叫 **Gemini 3.1 Flash** 進行語意理解與雜訊過濾，自動排除冗長發言與無關客套話。
 3. 採用 **Pydantic Schema (Structured Outputs)** 強制 LLM 輸出 100% 格式化的 JSON 資料，精準萃取「核心決議」與包含「負責人、優先級、截止日」的待辦事項。
 4. 提供標準 OpenAPI (Swagger) 互動式文件，具備非同步處理與完整的例外處理機制，利於後續擴展串接 Email、Notion 或 Slack 等自動化通知服務。
 
